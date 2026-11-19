@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
+import { useThemeStore } from '@/shared/stores/useThemeStore'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
+  const { mode, toggleTheme } = useThemeStore()
+
   return (
     <nav className={styles['navbar']}>
       <div className={styles['navbarContainer']}>
@@ -20,6 +23,16 @@ export default function Navbar() {
             <Link to="/learn" className={styles['navLink']}>
               Learn
             </Link>
+          </li>
+          <li className={styles['navItem']}>
+            <button
+              onClick={toggleTheme}
+              className={styles['themeToggle']}
+              aria-label="Toggle theme"
+              title={`Switch to ${mode === 'light' ? 'dark' : 'light'} mode`}
+            >
+              {mode === 'light' ? '🌙' : '☀️'}
+            </button>
           </li>
         </ul>
       </div>

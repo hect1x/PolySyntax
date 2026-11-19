@@ -6,9 +6,9 @@
 }
 
 .syntaxCard {
-  background: white;
+  background: var(--color-background);
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px var(--color-shadow);
   padding: 2rem;
   max-width: 600px;
   width: 100%;
@@ -20,13 +20,13 @@
   align-items: center;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid var(--color-borderLight);
 }
 
 .languageTag {
   display: inline-block;
   padding: 0.4rem 0.8rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primaryDark) 100%);
   color: white;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -35,18 +35,18 @@
 
 .counter {
   font-size: 0.9rem;
-  color: #999;
+  color: var(--color-textTertiary);
 }
 
 .syntaxTitle {
   margin: 0 0 1.5rem 0;
   font-size: 1.8rem;
-  color: #222;
+  color: var(--color-text);
 }
 
 .codeBlock {
-  background: #1e1e1e;
-  color: #d4d4d4;
+  background: var(--color-codeBackground);
+  color: var(--color-codeText);
   padding: 1.5rem;
   border-radius: 8px;
   margin-bottom: 1.5rem;
@@ -60,7 +60,7 @@
 }
 
 .explanation {
-  background: #f5f5f5;
+  background: var(--color-backgroundLight);
   padding: 1.5rem;
   border-radius: 8px;
   margin-bottom: 2rem;
@@ -73,19 +73,19 @@
 }
 
 .explanation:hover {
-  border-color: #667eea;
-  background: #fafafa;
+  border-color: var(--color-primary);
+  background: var(--color-backgroundAlt);
 }
 
 .explanation p {
   margin: 0;
-  color: #666;
+  color: var(--color-textSecondary);
   line-height: 1.6;
   font-size: 0.95rem;
 }
 
 .revealed p {
-  color: #222;
+  color: var(--color-text);
 }
 
 .controls {

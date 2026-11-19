@@ -18,13 +18,13 @@
 
 /* Primary button */
 .btnPrimary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primaryDark) 100%);
   color: white;
 }
 
 .btnPrimary:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 12px var(--color-shadow);
 }
 
 .btnPrimary:active:not(:disabled) {
@@ -33,29 +33,29 @@
 
 /* Secondary button */
 .btnSecondary {
-  background: #f0f0f0;
-  color: #333;
-  border: 1px solid #ddd;
+  background: var(--color-buttonBackground);
+  color: var(--color-buttonText);
+  border: 1px solid var(--color-buttonBorder);
 }
 
 .btnSecondary:hover:not(:disabled) {
-  background: #e0e0e0;
+  background: var(--color-backgroundLight);
 }
 
 /* Submit button */
 .btnSubmit {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primaryDark) 100%);
   color: white;
 }
 
 .btnSubmit:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 12px var(--color-shadow);
 }
 
 /* Edit button */
 .btnEdit {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, var(--color-edit) 0%, var(--color-editDark) 100%);
   color: white;
 }
 
@@ -66,7 +66,7 @@
 
 /* Delete button */
 .btnDelete {
-  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  background: linear-gradient(135deg, var(--color-delete) 0%, var(--color-deleteLight) 100%);
   color: white;
 }
 
@@ -77,7 +77,7 @@
 
 /* View button */
 .btnView {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: linear-gradient(135deg, var(--color-view) 0%, var(--color-viewLight) 100%);
   color: white;
 }
 

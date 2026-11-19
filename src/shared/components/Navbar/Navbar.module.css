@@ -1,8 +1,8 @@
 .navbar {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primaryDark) 100%);
   color: white;
   padding: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--color-shadow);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -52,6 +52,7 @@
   margin: 0;
   padding: 0;
   gap: 2rem;
+  align-items: center;
 }
 
 .navItem {
@@ -72,6 +73,32 @@
   opacity: 0.8;
 }
 
+.themeToggle {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.themeToggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.themeToggle:active {
+  transform: scale(0.95);
+}
+
 @media (max-width: 600px) {
   .navbarContainer {
     flex-direction: column;
@@ -86,5 +113,11 @@
 
   .navbarLogo {
     font-size: 1.2rem;
+  }
+
+  .themeToggle {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
   }
 }
