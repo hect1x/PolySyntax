@@ -10,6 +10,15 @@ interface ThemeState {
   setTheme: (mode: ThemeMode) => void
 }
 
+const applyTheme = (mode: ThemeMode, theme: Theme) => {
+  const root = document.documentElement
+  Object.entries(theme).forEach(([key, value]) => {
+    root.style.setProperty(`--color-${key}`, value)
+  })
+  document.documentElement.setAttribute('data-theme', mode)
+  localStorage.setItem('theme-mode', mode)
+}
+
 export const useThemeStore = create<ThemeState>((set) => {
   // Initialize theme from localStorage or system preference
   const getInitialMode = (): ThemeMode => {
@@ -24,27 +33,19 @@ export const useThemeStore = create<ThemeState>((set) => {
   }
 
   const initialMode = getInitialMode()
+  const initialTheme = initialMode === 'light' ? lightTheme : darkTheme
+
+  // Apply initial theme
+  applyTheme(initialMode, initialTheme)
 
   return {
     mode: initialMode,
-    theme: initialMode === 'light' ? lightTheme : darkTheme,
+    theme: initialTheme,
 
     setTheme: (mode: ThemeMode) => {
       set(() => {
         const theme = mode === 'light' ? lightTheme : darkTheme
-
-        // Update CSS variables
-        const root = document.documentElement
-        Object.entries(theme).forEach(([key, value]) => {
-          root.style.setProperty(`--color-${key}`, value)
-        })
-
-        // Update document attribute
-        document.documentElement.setAttribute('data-theme', mode)
-
-        // Persist to localStorage
-        localStorage.setItem('theme-mode', mode)
-
+        applyTheme(mode, theme)
         return { mode, theme }
       })
     },
@@ -53,19 +54,7 @@ export const useThemeStore = create<ThemeState>((set) => {
       set(({ mode: currentMode }) => {
         const newMode = currentMode === 'light' ? 'dark' : 'light'
         const theme = newMode === 'light' ? lightTheme : darkTheme
-
-        // Update CSS variables
-        const root = document.documentElement
-        Object.entries(theme).forEach(([key, value]) => {
-          root.style.setProperty(`--color-${key}`, value)
-        })
-
-        // Update document attribute
-        document.documentElement.setAttribute('data-theme', newMode)
-
-        // Persist to localStorage
-        localStorage.setItem('theme-mode', newMode)
-
+        applyTheme(newMode, theme)
         return { mode: newMode, theme }
       })
     },
