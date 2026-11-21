@@ -42,16 +42,6 @@
   background: var(--color-backgroundLight);
 }
 
-[data-theme='dark'] .btnSecondary {
-  background: #3a3a3a;
-  color: #d0d0d0;
-  border-color: #555;
-}
-
-[data-theme='dark'] .btnSecondary:hover:not(:disabled) {
-  background: #444;
-}
-
 /* Submit button */
 .btnSubmit {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primaryDark) 100%);
