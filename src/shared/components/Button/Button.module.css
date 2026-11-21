@@ -18,7 +18,7 @@
 
 /* Primary button */
 .btnPrimary {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primaryDark) 100%);
+  background: linear-gradient(135deg, var(--color-buttonGradientStart) 0%, var(--color-buttonGradientEnd) 100%);
   color: white;
 }
 
@@ -44,7 +44,7 @@
 
 /* Submit button */
 .btnSubmit {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primaryDark) 100%);
+  background: linear-gradient(135deg, var(--color-buttonGradientStart) 0%, var(--color-buttonGradientEnd) 100%);
   color: white;
 }
 

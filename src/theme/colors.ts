@@ -26,6 +26,8 @@ export const lightTheme = {
   buttonBackground: '#f0d9c4',
   buttonText: '#2c1a0e',
   buttonBorder: '#d9b89a',
+  buttonGradientStart: '#e8622a',
+  buttonGradientEnd: '#c0441a',
 
   // Code
   codeBackground: '#1e1e1e',
@@ -65,9 +67,11 @@ export const darkTheme = {
   shadowDark: 'rgba(0, 0, 0, 0.5)',
 
   // Button specific
-  buttonBackground: '#2a2a2a',
-  buttonText: '#e0e0e0',
-  buttonBorder: '#444',
+  buttonBackground: '#3a3a3a',
+  buttonText: '#d0d0d0',
+  buttonBorder: '#555555',
+  buttonGradientStart: '#4a4a4a',
+  buttonGradientEnd: '#2e2e2e',
 
   // Code
   codeBackground: '#1e1e1e',

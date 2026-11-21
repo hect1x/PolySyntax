@@ -22,6 +22,8 @@
   --color-buttonBackground: #f0d9c4;
   --color-buttonText: #2c1a0e;
   --color-buttonBorder: #d9b89a;
+  --color-buttonGradientStart: #e8622a;
+  --color-buttonGradientEnd: #c0441a;
   --color-codeBackground: #1e1e1e;
   --color-codeText: #d4d4d4;
   --color-delete: #fa709a;
