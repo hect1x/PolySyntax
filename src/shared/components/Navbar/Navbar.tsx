@@ -9,7 +9,6 @@ export default function Navbar() {
     <nav className={styles['navbar']}>
       <div className={styles['navbarContainer']}>
         <Link to="/" className={styles['navbarLogo']}>
-          <span className={styles['logoIcon']}>✨</span>
           DailySyntax
         </Link>
 
@@ -24,17 +23,18 @@ export default function Navbar() {
               Learn
             </Link>
           </li>
-          <li className={styles['navItem']}>
-            <button
-              onClick={toggleTheme}
-              className={styles['themeToggle']}
-              aria-label="Toggle theme"
-              title={`Switch to ${mode === 'light' ? 'dark' : 'light'} mode`}
-            >
-              {mode === 'light' ? '🌙' : '☀️'}
-            </button>
-          </li>
         </ul>
+
+        <div className={styles['navToggleWrapper']}>
+          <button
+            onClick={toggleTheme}
+            className={styles['themeToggle']}
+            aria-label="Toggle theme"
+            title={`Switch to ${mode === 'light' ? 'dark' : 'light'} mode`}
+          >
+            {mode === 'light' ? '🌙' : '☀️'}
+          </button>
+        </div>
       </div>
     </nav>
   )

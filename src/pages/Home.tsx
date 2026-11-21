@@ -15,21 +15,6 @@ export default function Home() {
           <Button type="primary">Start Learning</Button>
         </Link>
       </div>
-
-      <div className={styles['features']}>
-        <div className={styles['feature']}>
-          <h3>📅 Daily Rotation</h3>
-          <p>A new syntax snippet every day to keep your learning fresh</p>
-        </div>
-        <div className={styles['feature']}>
-          <h3>🎯 Focused Learning</h3>
-          <p>Short, digestible code examples with detailed explanations</p>
-        </div>
-        <div className={styles['feature']}>
-          <h3>💾 Track Progress</h3>
-          <p>Save your learning journey and revisit previously learned syntaxes</p>
-        </div>
-      </div>
     </div>
   )
 }

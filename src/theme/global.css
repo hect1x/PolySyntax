@@ -6,21 +6,22 @@
 
 :root {
   /* Light theme defaults */
-  --color-primary: #667eea;
-  --color-primaryDark: #764ba2;
-  --color-background: #ffffff;
-  --color-backgroundAlt: #f9f9f9;
-  --color-backgroundLight: #f5f5f5;
-  --color-text: #213547;
-  --color-textSecondary: #666666;
-  --color-textTertiary: #999999;
-  --color-border: #ddd;
-  --color-borderLight: #f0f0f0;
-  --color-shadow: rgba(0, 0, 0, 0.1);
-  --color-shadowDark: rgba(0, 0, 0, 0.15);
-  --color-buttonBackground: #f0f0f0;
-  --color-buttonText: #333;
-  --color-buttonBorder: #ddd;
+  --color-primary: #e8622a;
+  --color-primaryDark: #c0441a;
+  --color-background: #fdf6ee;
+  --color-backgroundAlt: #f8ede0;
+  --color-backgroundLight: #f3e4d2;
+  --color-backgroundNavbar: #f0d9c4;
+  --color-text: #2c1a0e;
+  --color-textSecondary: #6b4c35;
+  --color-textTertiary: #a07858;
+  --color-border: #d9b89a;
+  --color-borderLight: #ecdcc8;
+  --color-shadow: rgba(100, 50, 10, 0.1);
+  --color-shadowDark: rgba(100, 50, 10, 0.15);
+  --color-buttonBackground: #f0d9c4;
+  --color-buttonText: #2c1a0e;
+  --color-buttonBorder: #d9b89a;
   --color-codeBackground: #1e1e1e;
   --color-codeText: #d4d4d4;
   --color-delete: #fa709a;
@@ -30,7 +31,7 @@
   --color-view: #4facfe;
   --color-viewLight: #00f2fe;
 
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -88,4 +89,11 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: 'JetBrains Mono', monospace;
 }
