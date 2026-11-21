@@ -15,12 +15,17 @@ export default function Navbar() {
         <ul className={styles['navMenu']}>
           <li className={styles['navItem']}>
             <Link to="/" className={styles['navLink']}>
-              Home
+              Learn
             </Link>
           </li>
           <li className={styles['navItem']}>
-            <Link to="/learn" className={styles['navLink']}>
-              Learn
+            <Link to="/deck" className={styles['navLink']}>
+              Deck
+            </Link>
+          </li>
+          <li className={styles['navItem']}>
+            <Link to="/about" className={styles['navLink']}>
+              About
             </Link>
           </li>
         </ul>
