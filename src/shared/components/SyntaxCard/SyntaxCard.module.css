@@ -1,0 +1,72 @@
+.card {
+  background: var(--color-backgroundAlt);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.languageTabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  color: var(--color-textSecondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  border-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.tabActive {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primaryDark) 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.tabActive:hover {
+  color: white;
+}
+
+.codeBlock {
+  background: var(--color-codeBackground);
+  color: var(--color-codeText);
+  padding: 2rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+}
+
+.codeBlock code {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  white-space: pre;
+}

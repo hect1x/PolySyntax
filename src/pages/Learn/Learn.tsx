@@ -1,94 +1,54 @@
 import { useState } from 'react'
-import Button from '@/shared/components/Button/Button'
+import SyntaxCard, { SyntaxCardProps } from '@/shared/components/SyntaxCard/SyntaxCard'
 import styles from './Learn.module.css'
 
-interface Syntax {
-  id: number
-  title: string
-  code: string
-  explanation: string
-  language: string
-}
-
-const syntaxExamples: Syntax[] = [
+const syntaxCards: SyntaxCardProps[] = [
   {
-    id: 1,
     title: 'Arrow Functions',
-    code: 'const add = (a, b) => a + b',
-    explanation:
-      'Concise function syntax in JavaScript. Automatically returns the expression if no braces.',
-    language: 'JavaScript',
+    snippets: [
+      { language: 'JavaScript', code: 'const add = (a, b) => a + b' },
+      { language: 'TypeScript', code: 'const add = (a: number, b: number): number => a + b' },
+    ],
   },
   {
-    id: 2,
     title: 'Destructuring',
-    code: 'const { name, age } = person',
-    explanation:
-      'Extract properties from objects. Makes accessing nested data cleaner and more readable.',
-    language: 'JavaScript',
+    snippets: [
+      { language: 'JavaScript', code: 'const { name, age } = person' },
+      { language: 'Python', code: 'name, age = person["name"], person["age"]' },
+    ],
   },
   {
-    id: 3,
     title: 'Template Literals',
-    code: 'const msg = `Hello, ${name}!`',
-    explanation:
-      'Use backticks for string interpolation. Much cleaner than concatenation with +.',
-    language: 'JavaScript',
+    snippets: [
+      { language: 'JavaScript', code: 'const msg = `Hello, ${name}!`' },
+      { language: 'Python', code: 'msg = f"Hello, {name}!"' },
+    ],
   },
 ]
 
 export default function Learn() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isRevealed, setIsRevealed] = useState(false)
+  const [index, setIndex] = useState(0)
 
-  const current = syntaxExamples[currentIndex]
-
-  const handleNext = () => {
-    setCurrentIndex((currentIndex + 1) % syntaxExamples.length)
-    setIsRevealed(false)
-  }
-
-  const handlePrev = () => {
-    setCurrentIndex(
-      (currentIndex - 1 + syntaxExamples.length) % syntaxExamples.length
-    )
-    setIsRevealed(false)
-  }
+  const prev = () => setIndex((i) => (i - 1 + syntaxCards.length) % syntaxCards.length)
+  const next = () => setIndex((i) => (i + 1) % syntaxCards.length)
 
   return (
     <div className={styles['learn']}>
-      <div className={styles['syntaxCard']}>
-        <div className={styles['cardHeader']}>
-          <span className={styles['languageTag']}>{current.language}</span>
-          <span className={styles['counter']}>
-            {currentIndex + 1} / {syntaxExamples.length}
-          </span>
+      <div className={styles['viewer']}>
+        <button className={styles['arrow']} onClick={prev} aria-label="Previous">
+          ←
+        </button>
+
+        <div className={styles['cardWrapper']}>
+          <SyntaxCard key={syntaxCards[index].title} {...syntaxCards[index]} />
         </div>
 
-        <h2 className={styles['syntaxTitle']}>{current.title}</h2>
-
-        <div className={styles['codeBlock']}>
-          <code>{current.code}</code>
-        </div>
-
-        <div
-          className={`${styles['explanation']} ${isRevealed ? styles['revealed'] : ''}`}
-          onClick={() => setIsRevealed(!isRevealed)}
-        >
-          <p>
-            {isRevealed ? current.explanation : 'Hover or click to reveal explanation'}
-          </p>
-        </div>
-
-        <div className={styles['controls']}>
-          <Button onClick={handlePrev} type="secondary">
-            ← Previous
-          </Button>
-          <Button onClick={handleNext} type="primary">
-            Next →
-          </Button>
-        </div>
+        <button className={styles['arrow']} onClick={next} aria-label="Next">
+          →
+        </button>
       </div>
+
+      <p className={styles['counter']}>{index + 1} / {syntaxCards.length}</p>
     </div>
   )
 }
