@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className={styles['navbar']}>
       <div className={styles['navbarContainer']}>
         <Link to="/" className={styles['navbarLogo']}>
-          DailySyntax
+          PolySyntax
         </Link>
 
         <ul className={styles['navMenu']}>

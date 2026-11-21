@@ -7,7 +7,7 @@ export default function About() {
     <div className={styles['about']}>
       <h1>How it works</h1>
       <p className={styles['lead']}>
-        DailySyntax helps you pick up new programming syntax one snippet at a time.
+        PolySyntax helps you pick up new programming syntax one snippet at a time.
       </p>
 
       <div className={styles['steps']}>
