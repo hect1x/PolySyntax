@@ -31,7 +31,7 @@
   --color-view: #4facfe;
   --color-viewLight: #00f2fe;
 
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -89,4 +89,11 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: 'JetBrains Mono', monospace;
 }
