@@ -8,6 +8,12 @@
   gap: 1.5rem;
 }
 
+.cardMini {
+  padding: 1.5rem 1.75rem;
+  gap: 1rem;
+  border-radius: 8px;
+}
+
 .cardHeader {
   display: flex;
   flex-direction: column;
@@ -19,6 +25,10 @@
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--color-text);
+}
+
+.titleMini {
+  font-size: 1.1rem;
 }
 
 .languageTabs {
@@ -69,4 +79,14 @@
   font-size: 1.05rem;
   line-height: 1.7;
   white-space: pre;
+}
+
+.codeBlockMini {
+  padding: 1rem 1.25rem;
+  min-height: unset;
+}
+
+.codeBlockMini code {
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
