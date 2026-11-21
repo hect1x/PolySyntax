@@ -1,31 +1,31 @@
 export const lightTheme = {
   // Primary gradient
-  primary: '#e8622a',
-  primaryDark: '#c0441a',
+  primary: '#2d7a4f',
+  primaryDark: '#1a5c38',
 
   // Backgrounds
-  background: '#fdf6ee',
-  backgroundAlt: '#f8ede0',
-  backgroundLight: '#f3e4d2',
-  backgroundNavbar: '#f0d9c4',
+  background: '#f2f7f4',
+  backgroundAlt: '#e8f1ec',
+  backgroundLight: '#ddeae2',
+  backgroundNavbar: '#d3e3da',
 
   // Text
-  text: '#2c1a0e',
-  textSecondary: '#6b4c35',
-  textTertiary: '#a07858',
+  text: '#0e2318',
+  textSecondary: '#3a5c46',
+  textTertiary: '#6b8f78',
 
   // Borders
-  border: '#d9b89a',
-  borderLight: '#ecdcc8',
+  border: '#a8c8b4',
+  borderLight: '#c8dfd0',
 
   // Semantic
-  shadow: 'rgba(100, 50, 10, 0.1)',
-  shadowDark: 'rgba(100, 50, 10, 0.15)',
+  shadow: 'rgba(10, 50, 25, 0.1)',
+  shadowDark: 'rgba(10, 50, 25, 0.15)',
 
   // Button specific
-  buttonBackground: '#f0d9c4',
-  buttonText: '#2c1a0e',
-  buttonBorder: '#d9b89a',
+  buttonBackground: '#d3e3da',
+  buttonText: '#0e2318',
+  buttonBorder: '#a8c8b4',
 
   // Code
   codeBackground: '#1e1e1e',

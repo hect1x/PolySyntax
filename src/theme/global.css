@@ -6,22 +6,22 @@
 
 :root {
   /* Light theme defaults */
-  --color-primary: #e8622a;
-  --color-primaryDark: #c0441a;
-  --color-background: #fdf6ee;
-  --color-backgroundAlt: #f8ede0;
-  --color-backgroundLight: #f3e4d2;
-  --color-backgroundNavbar: #f0d9c4;
-  --color-text: #2c1a0e;
-  --color-textSecondary: #6b4c35;
-  --color-textTertiary: #a07858;
-  --color-border: #d9b89a;
-  --color-borderLight: #ecdcc8;
-  --color-shadow: rgba(100, 50, 10, 0.1);
-  --color-shadowDark: rgba(100, 50, 10, 0.15);
-  --color-buttonBackground: #f0d9c4;
-  --color-buttonText: #2c1a0e;
-  --color-buttonBorder: #d9b89a;
+  --color-primary: #2d7a4f;
+  --color-primaryDark: #1a5c38;
+  --color-background: #f2f7f4;
+  --color-backgroundAlt: #e8f1ec;
+  --color-backgroundLight: #ddeae2;
+  --color-backgroundNavbar: #d3e3da;
+  --color-text: #0e2318;
+  --color-textSecondary: #3a5c46;
+  --color-textTertiary: #6b8f78;
+  --color-border: #a8c8b4;
+  --color-borderLight: #c8dfd0;
+  --color-shadow: rgba(10, 50, 25, 0.1);
+  --color-shadowDark: rgba(10, 50, 25, 0.15);
+  --color-buttonBackground: #d3e3da;
+  --color-buttonText: #0e2318;
+  --color-buttonBorder: #a8c8b4;
   --color-codeBackground: #1e1e1e;
   --color-codeText: #d4d4d4;
   --color-delete: #fa709a;
