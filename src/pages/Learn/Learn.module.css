@@ -1,113 +1,58 @@
 .learn {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: center;
   min-height: 70vh;
+  gap: 1.5rem;
 }
 
-.syntaxCard {
-  background: var(--color-background);
-  border-radius: 12px;
-  box-shadow: 0 8px 32px var(--color-shadow);
-  padding: 2rem;
-  max-width: 600px;
-  width: 100%;
-}
-
-.cardHeader {
+.viewer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--color-borderLight);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 860px;
 }
 
-.languageTag {
-  display: inline-block;
-  padding: 0.4rem 0.8rem;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primaryDark) 100%);
-  color: white;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
+.cardWrapper {
+  flex: 1;
+}
+
+.arrow {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-backgroundAlt);
+  color: var(--color-text);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.arrow:hover {
+  border-color: var(--color-primary);
+  background: var(--color-backgroundLight);
 }
 
 .counter {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--color-textTertiary);
 }
 
-.syntaxTitle {
-  margin: 0 0 1.5rem 0;
-  font-size: 1.8rem;
-  color: var(--color-text);
-}
-
-.codeBlock {
-  background: var(--color-codeBackground);
-  color: var(--color-codeText);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  font-family: 'Courier New', monospace;
-  overflow-x: auto;
-}
-
-.codeBlock code {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.explanation {
-  background: var(--color-backgroundLight);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  min-height: 60px;
-  display: flex;
-  align-items: center;
-}
-
-.explanation:hover {
-  border-color: var(--color-primary);
-  background: var(--color-backgroundAlt);
-}
-
-.explanation p {
-  margin: 0;
-  color: var(--color-textSecondary);
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-.revealed p {
-  color: var(--color-text);
-}
-
-.controls {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
 @media (max-width: 600px) {
-  .syntaxCard {
-    padding: 1.5rem;
+  .viewer {
+    gap: 0.75rem;
   }
 
-  .syntaxTitle {
-    font-size: 1.5rem;
-  }
-
-  .codeBlock {
-    padding: 1rem;
-  }
-
-  .codeBlock code {
-    font-size: 0.9rem;
+  .arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
   }
 }
