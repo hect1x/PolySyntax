@@ -9,7 +9,6 @@ export default function Navbar() {
     <nav className={styles['navbar']}>
       <div className={styles['navbarContainer']}>
         <Link to="/" className={styles['navbarLogo']}>
-          <span className={styles['logoIcon']}>✨</span>
           DailySyntax
         </Link>
 
