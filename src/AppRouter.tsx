@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Layout from './Layout'
-import Home from './pages/Home'
-import Learn from './pages/Learn'
+import Home from './pages/Home/Home'
+import Learn from './pages/Learn/Learn'
 
 export default function AppRouter() {
   return (
