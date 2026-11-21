@@ -9,17 +9,18 @@ export interface Snippet {
 export interface SyntaxCardProps {
   title: string
   snippets: Snippet[]
+  mini?: boolean
 }
 
-export default function SyntaxCard({ title, snippets }: SyntaxCardProps) {
+export default function SyntaxCard({ title, snippets, mini = false }: SyntaxCardProps) {
   const [activeIndex, setActiveIndex] = useState(0)
 
   const active = snippets[activeIndex]
 
   return (
-    <div className={styles['card']}>
+    <div className={`${styles['card']} ${mini ? styles['cardMini'] : ''}`}>
       <div className={styles['cardHeader']}>
-        <h2 className={styles['title']}>{title}</h2>
+        <h2 className={`${styles['title']} ${mini ? styles['titleMini'] : ''}`}>{title}</h2>
         <div className={styles['languageTabs']}>
           {snippets.map((snippet, i) => (
             <button
@@ -33,7 +34,7 @@ export default function SyntaxCard({ title, snippets }: SyntaxCardProps) {
         </div>
       </div>
 
-      <div className={styles['codeBlock']}>
+      <div className={`${styles['codeBlock']} ${mini ? styles['codeBlockMini'] : ''}`}>
         <code>{active.code}</code>
       </div>
     </div>
