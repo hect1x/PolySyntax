@@ -1,17 +1,24 @@
 .navbar {
-  background: var(--color-backgroundNavbar);
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 3rem);
+  max-width: 900px;
+  background: color-mix(in srgb, var(--color-backgroundNavbar) 75%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
   color: var(--color-text);
-  padding: 0;
-  border-bottom: 1px solid var(--color-border);
-  position: sticky;
-  top: 0;
   z-index: 100;
+  box-shadow: 0 4px 24px var(--color-shadow);
 }
 
 .navbarContainer {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.6rem 1.25rem;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
